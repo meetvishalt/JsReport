@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Folder Include="jsreport\data" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="jsreport.Types" Version="2.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="jsreport\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  <Choose>
+    <When Condition=" '$(SolutionName)' == 'jsreport.development' ">
+      <ItemGroup>        
+        <ProjectReference Include="..\jsreport-dotnet-local\jsreport.Local\jsreport.Local.csproj" />
+        <ProjectReference Include="..\jsreport-dotnet-binary\jsreport.Binary\jsreport.Binary.csproj" />
+        <PackageReference Include="NETStandard.Library" Version="2.0.0" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Include="jsreport.Local" Version="2.0.1" />
+        <PackageReference Include="jsreport.Binary" Version="2.4.0" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+</Project>

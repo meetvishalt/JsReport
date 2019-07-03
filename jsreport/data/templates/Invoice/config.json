@@ -1,0 +1,15 @@
+{
+  "shortid": "rkJTnK2ce",
+  "recipe": "chrome-pdf",
+  "chrome": {
+    "landscape": false
+  },
+  "engine": "handlebars",
+  "data": {
+    "shortid": "Sy5S19ncg"
+  },
+  "modificationDate": {
+    "$$date": 1498738932509
+  },
+  "_id": "ulCoekcPKjgTxGLV"
+}

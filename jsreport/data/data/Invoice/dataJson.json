@@ -1,0 +1,16 @@
+{
+    "number": "10004",
+    "seller": {
+        "name": "Test Name",
+        "road": "Airoli Navi Mumbai",
+        "country": "INDIA"
+    },
+    "buyer": {
+        "name": "CT1",
+        "road": "16 Johnson Road"
+    },
+    "items": [{
+        "name": "Report design",
+        "price": 300
+    }]
+}
